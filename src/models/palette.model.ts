@@ -2,7 +2,6 @@ import { model, Schema } from "mongoose";
 import { Palette } from "../types/palette.types";
 
 const paletteSchema = new Schema<Palette>({
-  _id: { type: String },
   name: {
     type: String,
     required: true,

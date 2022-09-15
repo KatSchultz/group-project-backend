@@ -13,7 +13,7 @@ export async function getPalettes(req: Request, res: Response) {
 
 export async function getPalette(req: Request, res: Response) {
   try {
-    const palette = PalettesService.getPalette(req.params.id);
+    const palette = await PalettesService.getPalette(req.params.id);
     if (!palette) return res.status(404).json("Palette not found");
     return res.status(200).json(palette);
   } catch (error) {
@@ -24,7 +24,7 @@ export async function getPalette(req: Request, res: Response) {
 
 export async function addPalette(req: Request, res: Response) {
   try {
-    const newPalette = PalettesService.addPalette(req.body);
+    const newPalette = await PalettesService.addPalette(req.body);
     return res.status(201).json(newPalette);
   } catch (error) {
     console.log(error);
