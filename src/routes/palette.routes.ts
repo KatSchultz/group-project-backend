@@ -1,11 +1,11 @@
 import express from "express";
 import {
-  getUsers,
-  addUser,
-  getUser,
-  updateUser,
-  deleteUser,
-} from "../controllers/user.controller";
+  getPalettes,
+  addPalette,
+  getPalette,
+  updatePalette,
+  deletePalette,
+} from "../controllers/palette.controller";
 
 export const paletteRouter = express.Router();
 

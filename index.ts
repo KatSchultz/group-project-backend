@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { userRouter } from "./src/routes/user.routes";
+import { paletteRouter } from "./src/routes/palette.routes";
 
 const app = express();
 

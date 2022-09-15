@@ -16,12 +16,12 @@ async function getPaletteByUid(uid: string) {
   return palette;
 }
 
-async function addPalette(data: Partial<User>) {
+async function addPalette(data: Partial<Palette>) {
   const newPalette = await paletteModel.create(data);
   return newPalette;
 }
 
-async function updatePalette(id: string, data: Partial<User>) {
+async function updatePalette(id: string, data: Partial<Palette>) {
   const updatedPalette = await paletteModel.findByIdAndUpdate(id, data, {
     new: true,
   });
