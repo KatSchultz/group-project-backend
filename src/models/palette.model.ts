@@ -13,3 +13,5 @@ const paletteSchema = new Schema<Palette>({
   secondaryColor: { type: String },
   tertiaryColor: { type: String },
 });
+
+export const paletteModel = model<Palette>("Palette", paletteSchema);

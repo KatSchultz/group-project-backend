@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.use("/users", userRouter);
 
-app.use("/saved-palettes");
+app.use("/palettes", paletteRouter);
 
 const port = 3000;
 
