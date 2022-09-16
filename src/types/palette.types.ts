@@ -1,8 +1,12 @@
 export interface Palette {
   _id: string;
   name: string;
-  textColor: string;
   primaryColor: string;
   secondaryColor: string;
   tertiaryColor: string;
+  fourthColor: string;
+  fifthColor: string;
+  sixthColor: string;
+  textColor: string;
+  imgUrl: string;
 }
