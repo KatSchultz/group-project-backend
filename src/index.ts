@@ -4,6 +4,7 @@ import cors from "cors";
 import { userRouter } from "./routes/user.routes";
 import { paletteRouter } from "./routes/palette.routes";
 import mongoose from "mongoose";
+import { authRouter } from "./routes/auth.routes";
 
 const app = express();
 
@@ -11,8 +12,8 @@ app.use(cors());
 
 app.use(express.json());
 
+app.use("/auth", authRouter);
 app.use("/users", userRouter);
-
 app.use("/palettes", paletteRouter);
 
 mongoose
