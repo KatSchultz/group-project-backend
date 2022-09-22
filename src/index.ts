@@ -5,6 +5,7 @@ import { userRouter } from "./routes/user.routes";
 import { paletteRouter } from "./routes/palette.routes";
 import mongoose from "mongoose";
 import { authRouter } from "./routes/auth.routes";
+import { profileRouter } from "./routes/profile.routes";
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 
 app.use("/auth", authRouter);
 app.use("/users", userRouter);
+app.use(".profiles", profileRouter);
 app.use("/palettes", paletteRouter);
 
 mongoose
