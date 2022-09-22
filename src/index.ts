@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use("/auth", authRouter);
 app.use("/users", userRouter);
-app.use(".profiles", profileRouter);
+app.use("/profiles", profileRouter);
 app.use("/palettes", paletteRouter);
 
 mongoose
