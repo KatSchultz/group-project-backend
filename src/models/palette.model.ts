@@ -15,6 +15,7 @@ const paletteSchema = new Schema<Palette>({
   fifthColor: { type: String },
   sixthColor: { type: String },
   imgUrl: { type: String },
+  uid: { type: String },
 });
 
 export const paletteModel = model<Palette>("Palette", paletteSchema);
