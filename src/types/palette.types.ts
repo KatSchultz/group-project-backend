@@ -9,4 +9,5 @@ export interface Palette {
   sixthColor: string;
   textColor: string;
   imgUrl: string;
+  uid: string;
 }
