@@ -11,6 +11,11 @@ async function getPalette(id: string) {
   return palette;
 }
 
+async function getPalettesByUid(uid: string) {
+  const palette = await paletteModel.find({ uid }).lean();
+  return palette;
+}
+
 async function getPaletteByUid(uid: string) {
   const palette = await paletteModel.findOne({ uid }).lean();
   return palette;
@@ -35,6 +40,7 @@ async function deletePalette(id: string) {
 export const PalettesService = {
   getPalettes,
   getPalette,
+  getPalettesByUid,
   getPaletteByUid,
   addPalette,
   updatePalette,

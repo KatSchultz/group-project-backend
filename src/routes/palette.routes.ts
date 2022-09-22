@@ -5,11 +5,12 @@ import {
   getPalette,
   updatePalette,
   deletePalette,
+  getPalettesByUid,
 } from "../controllers/palette.controller";
 
 export const paletteRouter = express.Router();
 
-paletteRouter.route("/").get(getPalettes).post(addPalette);
+paletteRouter.route("/").get(getPalettesByUid).post(addPalette);
 
 paletteRouter
   .route("/:id")

@@ -11,6 +11,16 @@ export async function getPalettes(req: Request, res: Response) {
   }
 }
 
+export async function getPalettesByUid(req: Request, res: Response) {
+  try {
+    const palettes = await PalettesService.getPalettesByUid(req.params.uid);
+    return res.status(200).json(palettes);
+  } catch (error) {
+    console.log(error);
+    return res.status(500).json(error);
+  }
+}
+
 export async function getPalette(req: Request, res: Response) {
   try {
     const palette = await PalettesService.getPalette(req.params.id);
