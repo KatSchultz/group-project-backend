@@ -13,7 +13,7 @@ export async function getPalettes(req: Request, res: Response) {
 
 export async function getPalettesByUid(req: Request, res: Response) {
   try {
-    const palettes = await PalettesService.getPalettesByUid(req.params.uid);
+    const palettes = await PalettesService.getPalettesByUid(req.query.uid as string);
     return res.status(200).json(palettes);
   } catch (error) {
     console.log(error);

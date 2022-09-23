@@ -5,7 +5,7 @@ const paletteSchema = new Schema<Palette>({
   name: {
     type: String,
     required: true,
-    unique: true,
+    // unique: true,
   },
   textColor: { type: String, required: true },
   primaryColor: { type: String, required: true },
